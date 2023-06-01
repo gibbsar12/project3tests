@@ -1,0 +1,17 @@
+(class Dog
+(method void main()
+print "l"
+)
+)
+(class main
+(field Dog n null)
+(field Dog e)
+(field int l 4)
+      (method void main ()
+       (let ((bool b) (string c) (int d))
+         (print b)  # prints False
+         (print c)  # prints empty string
+         (print d)  # prints 0
+         (if (!= e null) (print "value") (print "null")) # prints null
+) )
+)

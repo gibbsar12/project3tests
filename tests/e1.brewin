@@ -1,0 +1,25 @@
+
+(class main
+ (method void foo ()
+   (begin
+     (print "hello")
+     (throw "I ran into a problem!")
+     (print "goodbye")
+) )
+ (method void bar ()
+   (begin
+     (print "hi")
+     (call me foo)
+     (print "bye")
+) )
+ (method void main ()
+  (begin
+(try
+       # try running the a statement that may generate an exception
+(call me bar)
+       # only run the following statement if an exception occurs
+       (print "I got this exception: " exception)
+)
+    (print "this runs whether or not an exception occurs")
+  )
+) )

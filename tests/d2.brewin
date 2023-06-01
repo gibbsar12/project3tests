@@ -1,0 +1,23 @@
+(class main
+(field int x 10) 
+(field bool m true)
+(field bool y)
+(method void main () 
+(begin
+(let ((int a 5) (bool b true)) 
+(begin
+(print x)
+(print a)
+(print b)
+)
+)
+(let ((int a) (bool b)) 
+(begin
+(print y)
+(print a)
+(print b)
+)
+)
+)
+)
+)

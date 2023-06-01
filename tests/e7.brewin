@@ -1,0 +1,33 @@
+(class main
+ (method int foo () 
+   (begin
+      (try
+        (try
+         (call me bar 6)
+         (print (+ exception "blal"))
+       )
+       (begin
+         (print exception)
+         (throw "think")
+       )
+      )
+      (print "loop")
+    )
+ )
+ (method int bar ((int x)) 
+   (begin
+     (print x)
+     (throw "thrunk")
+   )
+ )
+
+ (method void main ()
+  (begin
+    (try
+       (call me bar (call me foo))
+       (print exception)
+    )
+    (print "done")
+  )
+ )
+)

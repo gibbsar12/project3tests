@@ -1,0 +1,17 @@
+(class main
+    (method void foo ()
+        (while true
+            (begin
+                (print "argh")
+                (throw "blah")
+                (print "yay!")
+            )
+        )
+    )
+    (method void main ()
+      (try 
+      (call me foo)
+      (print exception)
+     )
+    )
+  ) 
